@@ -1,0 +1,26 @@
+.App{
+  margin:0px;
+  padding:0px;
+}
+
+.App-header{
+  width:100%;
+  height:50px;
+  background-color: black;
+  margin:0px;
+  padding:0px;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 100px;
+
+  .navItem{
+    color:white;
+  }
+}
+
+.pict{
+  color:white;
+}
