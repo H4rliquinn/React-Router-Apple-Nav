@@ -4,8 +4,8 @@ import React from 'react';
 function Home(props){
 
     return (
-        <div className="main">
-          Home 
+        <div>
+          <h1>Home - {props.location.pathname}</h1>
         </div>
     )
 }

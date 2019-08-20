@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faApple } from '@fortawesome/free-brands-svg-icons';
 import {faSuitcase,faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +16,7 @@ function Pict(props){
 
     return (
         <div className="pict">
-            <FontAwesomeIcon icon={logo}/>
+            <NavLink to="/"><FontAwesomeIcon icon={logo}/></NavLink>
         </div>
     )
 }

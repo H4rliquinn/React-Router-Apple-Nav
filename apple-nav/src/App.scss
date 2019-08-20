@@ -1,6 +1,7 @@
 .App{
   margin:0px;
   padding:0px;
+  box-sizing:border-box;
 }
 
 .App-header{
@@ -16,11 +17,34 @@ nav{
   justify-content:space-between;
   padding:15px 100px;
 
-  .navItem{
+  .navItem,.pict{
     color:white;
+    a{
+      color:white;
+      text-decoration: none;
+      &:hover{
+        color:#ccc;
+      }
+    }
+    
   }
 }
 
 .pict{
   color:white;
+}
+
+.main{
+  width:100%;
+  text-align:center;
+  // border:1px solid red;
+  // display:block;
+  // position:relative;
+  // top:52px;
+}
+
+.subNav{
+  background-color: #CCC;
+  height:50px;
+  // border:1px solid blue;
 }
