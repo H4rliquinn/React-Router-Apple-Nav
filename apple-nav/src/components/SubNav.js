@@ -6,12 +6,12 @@ import {NavLink, Route} from 'react-router-dom';
 function SubNav(props){
 
     const subs=[
-        {id:"mac",mac:["Stuff","Other Stuff"]},
-        {id:"ipad",ipad:["Stuff","Other Stuff"]},
-        {id:"iphone",iphone:["Stuff","Other Stuff"]},
-        {id:"watch",watch:["Stuff"]},
-        {id:"tv",tv:["Stuff"]},
-        {id:"music",music:["Stuff"]},
+        {id:"mac",mac:["MacBook Air","MacBook Pro"]},
+        {id:"ipad",ipad:["iPad Pro","iPad Air"]},
+        {id:"iphone",iphone:["iPhone XS","iPhone Xr"]},
+        {id:"watch",watch:["Apple Watch Series 4","Apple Watch Nike+"]},
+        {id:"tv",tv:["Apple TV app", "Apple TV+"]},
+        {id:"music",music:["Apple Music", "iTunes"]},
         {id:"support",support:["Stuff"]}
     ];
 
@@ -22,13 +22,9 @@ function SubNav(props){
     // console.log(items);
     return (
         <div className="subNav">
-            <NavLink className="subNavLink" to="/"><h2>Start</h2></NavLink>
-            {items[props.match.params.tech].forEach((item)=>{
-                console.log(item);
-                return <NavLink className="subNavLink" to="/"><h2>{item}</h2></NavLink>
+            {items[props.match.params.tech].map((item)=>{
+                return <NavLink className="subNavLink" to="/" key={item}><h2>{item}</h2></NavLink>
             })}
-            <NavLink className="subNavLink" to="/"><h2>End</h2></NavLink>
-
         </div>
     )
 }
