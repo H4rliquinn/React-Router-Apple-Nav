@@ -1,6 +1,5 @@
 import React from 'react';
-import {NavLink, Route} from 'react-router-dom';
-
+import {NavLink} from 'react-router-dom';
 
 
 function SubNav(props){
@@ -12,10 +11,13 @@ function SubNav(props){
         {id:"watch",watch:["Apple Watch Series 4","Apple Watch Nike+"]},
         {id:"tv",tv:["Apple TV app", "Apple TV+"]},
         {id:"music",music:["Apple Music", "iTunes"]},
-        {id:"support",support:["Stuff"]}
+        {id:"support",support:[]}
     ];
 
     // console.log(props.match.params.tech);
+    if (props.match.params.tech=="support"){
+        return "";
+    }
     const items=subs.find((item)=>{
         return props.match.params.tech===String(item.id)
     });
