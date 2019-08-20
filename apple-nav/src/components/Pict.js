@@ -13,9 +13,6 @@ function Pict(props){
         logo=faSuitcase;
     } 
 
-
-console.log(logo);
-
     return (
         <div className="pict">
             <FontAwesomeIcon icon={logo}/>
